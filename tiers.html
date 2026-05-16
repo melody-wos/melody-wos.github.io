@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealCode | 티어 제도</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+    <style>
+        :root { --primary: #00b894; --secondary: #0984e3; --dark: #2d3436; --light: #f9f9f9; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Pretendard', sans-serif; line-height: 1.6; color: var(--dark); background-color: var(--light); }
+        a { text-decoration: none; color: inherit; }
+
+        nav { background: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); letter-spacing: -1px; }
+        .nav-links a { margin-left: 2rem; font-weight: 600; color: #636e72; transition: 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary); }
+        footer { background: var(--dark); color: white; padding: 50px 10%; text-align: center; margin-top: 50px; }
+
+        section { padding: 60px 10%; max-width: 1000px; margin: 0 auto; }
+        .section-title { text-align: center; margin-bottom: 40px; }
+        .section-title h2 { font-size: 2rem; margin-bottom: 10px; }
+
+        .tier-container { background: white; padding: 40px; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .tier-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; }
+        .tier-item { text-align: center; padding: 20px; border-radius: 15px; background: var(--light); border: 1px solid #eee; }
+        .tier-item .icon { font-size: 2rem; margin-bottom: 10px; }
+        .tier-item .name { font-weight: 700; display: block; }
+        .tier-item .points { font-size: 0.9rem; color: #636e72; }
+
+        .point-info { margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .info-box { background: #f0f3f5; padding: 25px; border-radius: 15px; border-left: 5px solid var(--secondary); }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">HealCode</div>
+        <div class="nav-links">
+            <a href="index.html">홈(소개)</a>
+            <a href="tiers.html" class="active">티어 제도</a>
+            <a href="members.html">구성원</a>
+        </div>
+    </nav>
+
+    <section>
+        <div class="section-title">
+            <h2>HealCode Tier System</h2>
+            <p>성장을 응원하고 보상하기 위한 포인트 제도</p>
+        </div>
+        <div class="tier-container">
+            <div class="tier-list">
+                <div class="tier-item"><div class="icon">💎</div><span class="name">Diamond</span><span class="points">320+ pts</span></div>
+                <div class="tier-item"><div class="icon">🍃</div><span class="name">Platinum</span><span class="points">200+ pts</span></div>
+                <div class="tier-item"><div class="icon">🔑</div><span class="name">Gold</span><span class="points">120+ pts</span></div>
+                <div class="tier-item"><div class="icon">🥈</div><span class="name">Silver</span><span class="points">60+ pts</span></div>
+                <div class="tier-item"><div class="icon">🥉</div><span class="name">Bronze</span><span class="points">20+ pts</span></div>
+                <div class="tier-item" style="opacity: 0.5;"><div class="icon">🥶</div><span class="name">Freezed</span><span class="points">&lt; 20 pts</span></div>
+            </div>
+            <div class="point-info">
+                <div class="info-box">
+                    <h3>포인트 획득 방법</h3>
+                    <p>• 정기 세션 참여 및 발표<br>• 프로젝트 결과물 도출<br>• 브릿지 강화 활동 기여</p>
+                </div>
+                <div class="info-box" style="border-left-color: var(--primary);">
+                    <h3>활동 상태</h3>
+                    <p>모든 멤버는 0점에서 시작합니다. 20점 미만 시 freezed_member 상태가 되며, 20점 달성 시 활성화됩니다. (분기별 업데이트)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 HealCode. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
