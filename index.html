@@ -3,48 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>우리 단체 웹페이지</title>
+    <title>HealCode | 홈</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
-        body { font-family: 'Pretendard', sans-serif; background-color: #f4f7f6; color: #333; margin: 0; padding: 40px 20px; display: flex; justify-content: center; }
-        .container { background-color: white; max-width: 600px; width: 100%; border-radius: 15px; padding: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        
-        /* ✨ 새로 추가된 메뉴바 디자인 */
-        .nav { display: flex; justify-content: center; gap: 15px; margin-bottom: 30px; border-bottom: 2px solid #ecf0f1; padding-bottom: 15px; }
-        .nav a { text-decoration: none; color: #3498db; font-weight: bold; padding: 10px 20px; border-radius: 8px; background-color: #f8f9fa; }
-        .nav a:hover { background-color: #e0f2fe; } /* 마우스 올렸을 때 색상 변화 */
+        :root { --primary: #00b894; --secondary: #0984e3; --dark: #2d3436; --light: #f9f9f9; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Pretendard', sans-serif; line-height: 1.6; color: var(--dark); background-color: var(--light); }
+        a { text-decoration: none; color: inherit; }
 
-        h1 { color: #2c3e50; text-align: center; margin-bottom: 5px; }
-        .subtitle { text-align: center; color: #7f8c8d; margin-bottom: 30px; }
-        h2 { color: #3498db; border-bottom: 2px solid #ecf0f1; padding-bottom: 10px; margin-top: 30px; }
-        ul { list-style-type: none; padding: 0; }
-        li { background-color: #f8f9fa; margin-bottom: 10px; padding: 15px; border-radius: 8px; border-left: 4px solid #3498db; }
+        /* 공통 네비게이션 & 푸터 */
+        nav { background: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); letter-spacing: -1px; }
+        .nav-links a { margin-left: 2rem; font-weight: 600; color: #636e72; transition: 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary); }
+        footer { background: var(--dark); color: white; padding: 50px 10%; text-align: center; margin-top: 50px; }
+
+        /* 메인 콘텐츠 디자인 */
+        .hero { background: linear-gradient(135deg, #00b894 0%, #0984e3 100%); color: white; padding: 80px 5%; text-align: center; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        section { padding: 60px 10%; }
+        .section-title { text-align: center; margin-bottom: 40px; }
+        .section-title h2 { font-size: 2rem; margin-bottom: 10px; }
+        
+        .activity-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .activity-card { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .activity-card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <div class="nav">
-        <a href="index.html">🏠 홈 (활동내역)</a>
-        <a href="members.html">👥 구성원</a>
-    </div>
+    <nav>
+        <div class="logo">HealCode</div>
+        <div class="nav-links">
+            <a href="index.html" class="active">홈(소개)</a>
+            <a href="tiers.html">티어 제도</a>
+            <a href="members.html">구성원</a>
+        </div>
+    </nav>
 
-    <h1>🚀 [단체 이름]</h1>
-    <p class="subtitle">우리 단체의 주요 활동을 소개합니다.</p>
+    <header class="hero">
+        <h1>We heal patients,<br>with code and 🏥</h1>
+        <p>보건의료인 X 엔지니어 연합 커뮤니티</p>
+    </header>
 
-    <h2>✨ 주요 활동</h2>
-    <ul>
-        <li><strong>정기 모임:</strong> 매주 모여서 저널 리뷰 및 스터디 진행</li>
-        <li><strong>프로젝트:</strong> 학기말 임상 케이스 발표</li>
-        <li><strong>네트워킹:</strong> 친목 도모를 위한 워크샵</li>
-    </ul>
-    
-    <h2>📞 연락처</h2>
-    <ul>
-        <li>📧 이메일: contact@ourclub.com</li>
-        <li>📱 인스타그램: @ourclub_official</li>
-    </ul>
-</div>
+    <section>
+        <div class="section-title">
+            <h2>HealCode 소개 및 활동</h2>
+            <p>우리는 기술로 의료 현장의 문제를 해결하고 가치를 전달합니다.</p>
+        </div>
+        <div class="activity-grid">
+            <div class="activity-card">
+                <i class="fa-solid fa-stethoscope"></i>
+                <h3>Domain Expertise</h3>
+                <p>보건의료인의 임상 경험과 현장의 니즈를 분석하여 해결이 필요한 문제를 정의합니다.</p>
+            </div>
+            <div class="activity-card">
+                <i class="fa-solid fa-code"></i>
+                <h3>Tech Execution</h3>
+                <p>엔지니어의 기술력을 통해 정의된 문제를 실제 작동하는 코드로 구현합니다.</p>
+            </div>
+            <div class="activity-card">
+                <i class="fa-solid fa-bridge"></i>
+                <h3>Bridging Gaps</h3>
+                <p>서로 다른 두 언어를 연결하며 의료IT의 새로운 생태계를 만들어갑니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 HealCode. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
