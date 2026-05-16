@@ -3,41 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>구성원 - 우리 단체</title>
+    <title>HealCode | 구성원</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
     <style>
-        /* 디자인 뼈대는 홈 화면과 똑같이 유지합니다 */
-        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
-        body { font-family: 'Pretendard', sans-serif; background-color: #f4f7f6; color: #333; margin: 0; padding: 40px 20px; display: flex; justify-content: center; }
-        .container { background-color: white; max-width: 600px; width: 100%; border-radius: 15px; padding: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        
-        .nav { display: flex; justify-content: center; gap: 15px; margin-bottom: 30px; border-bottom: 2px solid #ecf0f1; padding-bottom: 15px; }
-        .nav a { text-decoration: none; color: #3498db; font-weight: bold; padding: 10px 20px; border-radius: 8px; background-color: #f8f9fa; }
-        .nav a:hover { background-color: #e0f2fe; }
+        :root { --primary: #00b894; --secondary: #0984e3; --dark: #2d3436; --light: #f9f9f9; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Pretendard', sans-serif; line-height: 1.6; color: var(--dark); background-color: var(--light); }
+        a { text-decoration: none; color: inherit; }
 
-        h1 { color: #2c3e50; text-align: center; margin-bottom: 5px; }
-        .subtitle { text-align: center; color: #7f8c8d; margin-bottom: 30px; }
-        ul { list-style-type: none; padding: 0; }
-        /* 구성원 페이지는 시각적 분리를 위해 테두리를 초록색 포인트로 바꿨습니다 */
-        li { background-color: #f8f9fa; margin-bottom: 10px; padding: 15px; border-radius: 8px; border-left: 4px solid #2ecc71; } 
+        nav { background: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); letter-spacing: -1px; }
+        .nav-links a { margin-left: 2rem; font-weight: 600; color: #636e72; transition: 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary); }
+        footer { background: var(--dark); color: white; padding: 50px 10%; text-align: center; margin-top: 50px; }
+
+        section { padding: 60px 10%; max-width: 900px; margin: 0 auto; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-top: 50px; }
+        .section-title { text-align: center; margin-bottom: 40px; }
+        .section-title h2 { font-size: 2rem; margin-bottom: 10px; }
+
+        .member-list { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; }
+        .member-tag { padding: 10px 20px; background: var(--light); border: 1px solid #ddd; border-radius: 50px; font-weight: 600; font-size: 1.1rem; }
+        .member-tag.diamond { border-color: #00cec9; color: #00cec9; background: #e0ffff; }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <div class="nav">
-        <a href="index.html">🏠 홈 (활동내역)</a>
-        <a href="members.html">👥 구성원</a>
-    </div>
+    <nav>
+        <div class="logo">HealCode</div>
+        <div class="nav-links">
+            <a href="index.html">홈(소개)</a>
+            <a href="tiers.html">티어 제도</a>
+            <a href="members.html" class="active">구성원</a>
+        </div>
+    </nav>
 
-    <h1>👥 구성원 소개</h1>
-    <p class="subtitle">우리 단체를 이끌어가는 사람들입니다.</p>
+    <section>
+        <div class="section-title">
+            <h2>HealCoders</h2>
+            <p>HealCode를 함께 만들어가는 열정적인 멤버들입니다.</p>
+        </div>
+        <div class="member-list">
+            <div class="member-tag diamond">💎 김철수(대표)</div>
+            <div class="member-tag">🍃 이영희</div>
+            <div class="member-tag">🔑 박지민</div>
+            <div class="member-tag">🥈 최현우</div>
+            <div class="member-tag">🥈 정다은</div>
+            <div class="member-tag">🥉 강호진</div>
+            <div class="member-tag">🥉 유재석</div>
+            <div class="member-tag">🥉 신사임당</div>
+            <div class="member-tag">🥶 홍길동</div>
+        </div>
+    </section>
 
-    <ul>
-        <li><strong>홍길동</strong> - 대표 (전체 운영 총괄)</li>
-        <li><strong>김철수</strong> - 기획 (프로젝트 기획 및 관리)</li>
-        <li><strong>이영희</strong> - 홍보 (웹사이트 관리 및 디자인)</li>
-    </ul>
-</div>
+    <footer>
+        <p>&copy; 2024 HealCode. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
