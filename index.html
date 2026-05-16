@@ -26,9 +26,9 @@
         .section-title h2 { font-size: 2.2rem; margin-bottom: 10px; }
         .section-title p { color: #636e72; font-size: 1.1rem; }
         
-        /* 아이덴티티 섹션 디자인 */
+        /* 아이덴티티 섹션 */
         .identity-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 80px; }
-        .identity-card { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; position: relative; overflow: hidden; border-top: 5px solid; }
+        .identity-card { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; border-top: 5px solid; }
         .identity-card.healer { border-color: var(--healer); }
         .identity-card.crafter { border-color: var(--crafter); }
         .identity-card i { font-size: 3rem; margin-bottom: 20px; }
@@ -36,22 +36,12 @@
         .identity-card.crafter i { color: var(--crafter); }
         .identity-card h3 { font-size: 1.8rem; margin-bottom: 10px; }
         
-        /* 활동 섹션 디자인 */
-        .activity-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 80px; }
+        /* 활동 섹션 */
+        .activity-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
         .activity-card { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
         .activity-card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
-
-        /* 가이드라인 섹션 디자인 */
-        .guide-box { background: white; padding: 40px 50px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-left: 5px solid var(--secondary); }
-        .guide-list { list-style: none; }
-        .guide-list li { margin-bottom: 20px; padding-left: 30px; position: relative; font-size: 1.1rem; color: #2d3436; line-height: 1.7; }
-        .guide-list li::before { content: '\f0da'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; left: 0; color: var(--secondary); font-size: 1.2rem; }
         
         footer { background: var(--dark); color: white; padding: 30px 10%; text-align: center; margin-top: auto; }
-
-        @media (max-width: 768px) {
-            .guide-box { padding: 30px 20px; }
-        }
     </style>
 </head>
 <body>
@@ -110,21 +100,6 @@
                 <h3>Bridging Gaps</h3>
                 <p>서로 다른 두 언어를 연결하며 의료IT의 새로운 생태계를 만들어갑니다.</p>
             </div>
-        </div>
-
-        <div class="section-title" style="margin-top: 100px;">
-            <h2>Community Culture</h2>
-            <p>건강하고 지속가능한 HealCode를 만들어나가기 위한 이용 가이드입니다.</p>
-        </div>
-        <div class="guide-box">
-            <ul class="guide-list">
-                <li>이 채널에서는 가급적 상호간에 <strong>존칭을 사용</strong>해주세요.</li>
-                <li>선배님, 후배님, 학우님이라는 호칭보다는 <strong>닉네임 / 혹은 닉네임+'님'</strong> 자를 붙여서 호칭해주세요. <br><span style="font-size: 0.95rem; color: #a4b0be;">(ex. 우키, 톰, 존, 우형님, 림 등... 입에 착붙는대로)</span></li>
-                <li><strong>개발을 잘하면 미성년자여도 형입니다.</strong> 우리 커뮤니티는 나이나 학번으로 우선순위를 정하지 않습니다.</li>
-                <li>HealCode는 <strong>자발적 참여</strong>를 독려합니다. 혹시라도 스트레스를 받는다고 느껴지면 커뮤니티 활동을 쉬어주세요.</li>
-                <li><strong>커뮤니티 탈퇴도 언제나 가능합니다.</strong> 별도의 사전 고지 없이 자유롭게 디스코드 채널을 나가시거나 카톡방을 나가셔도 됩니다.</li>
-                <li>원할 때는 <strong>언제나 다시 들어올 수 있습니다.</strong> 다만, 디스코드 QR 접근 코딩테스트는 다시 해야 합니다. 😉</li>
-            </ul>
         </div>
     </section>
 
