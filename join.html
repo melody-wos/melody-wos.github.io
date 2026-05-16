@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealCode | Join Us</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+    <style>
+        :root { --primary: #00b894; --secondary: #0984e3; --dark: #2d3436; --light: #f9f9f9; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Pretendard', sans-serif; line-height: 1.6; color: var(--dark); background-color: var(--light); display: flex; flex-direction: column; min-height: 100vh; }
+        a { text-decoration: none; color: inherit; }
+
+        nav { background: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); letter-spacing: -1px; }
+        .nav-links a { margin-left: 2rem; font-weight: 600; color: #636e72; transition: 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary); }
+
+        section { padding: 60px 10%; max-width: 900px; margin: 0 auto; flex: 1; width: 100%; }
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title h2 { font-size: 2.2rem; margin-bottom: 10px; }
+        
+        /* 지원하기 버튼 박스 */
+        .apply-box { background: linear-gradient(135deg, #00b894 0%, #0984e3 100%); padding: 40px; border-radius: 20px; text-align: center; color: white; margin-bottom: 60px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .apply-box h3 { font-size: 1.8rem; margin-bottom: 15px; }
+        .apply-btn { display: inline-block; margin-top: 20px; padding: 15px 40px; background: white; color: var(--secondary); font-weight: bold; font-size: 1.1rem; border-radius: 50px; transition: 0.3s; }
+        .apply-btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(255,255,255,0.3); }
+
+        /* FAQ 아코디언 스타일 */
+        .faq-container { display: flex; flex-direction: column; gap: 15px; }
+        details { background: white; border-radius: 12px; border: 1px solid #eee; overflow: hidden; transition: 0.3s; }
+        summary { padding: 20px; font-weight: 700; font-size: 1.1rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: '+'; font-size: 1.5rem; color: var(--primary); transition: 0.3s; }
+        details[open] summary::after { content: '−'; }
+        details[open] { border-color: var(--primary); box-shadow: 0 5px 15px rgba(0,184,148,0.1); }
+        .faq-answer { padding: 0 20px 20px; color: #636e72; border-top: 1px dashed #eee; margin-top: 10px; padding-top: 20px; }
+
+        footer { background: var(--dark); color: white; padding: 30px 10%; text-align: center; margin-top: auto; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">HealCode</div>
+        <div class="nav-links">
+            <a href="index.html">About</a>
+            <a href="tiers.html">Tier System</a>
+            <a href="members.html">Members</a>
+            <a href="join.html" class="active">Join Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <section>
+        <div class="apply-box">
+            <h3>의료의 미래를 함께 코딩할 멤버를 찾습니다</h3>
+            <p>HealCode와 함께 성장하며 새로운 가치를 만들어갈 여러분의 지원을 기다립니다.</p>
+            <a href="#" class="apply-btn">지원서 작성하기 🚀</a>
+        </div>
+
+        <div class="section-title">
+            <h2>자주 묻는 질문 (FAQ)</h2>
+            <p>지원 전 궁금한 점을 확인해 보세요.</p>
+        </div>
+
+        <div class="faq-container">
+            <details>
+                <summary>Q. 코딩을 전혀 모르는 보건의료인도 지원할 수 있나요?</summary>
+                <div class="faq-answer">
+                    A. 물론입니다! HealCode는 개발자만을 뽑는 곳이 아닙니다. 실제 임상 현장에서 느낀 페인포인트(Pain point)를 발굴하고, 의학적 도메인 지식을 바탕으로 문제를 정의할 수 있는 열정이 훨씬 중요합니다.
+                </div>
+            </details>
+
+            <details>
+                <summary>Q. 본과 임상 실습(PK)이나 현업 개발 일정으로 바쁜데 병행이 가능할까요?</summary>
+                <div class="faq-answer">
+                    A. HealCode는 멤버들의 빡빡한 병원 실습 및 업무 일정을 충분히 이해하고 있습니다. 티어(Tier) 제도는 강제적인 압박이 아닌 자율적인 기여를 응원하기 위해 존재합니다. 정기 모임 외의 프로젝트는 본인의 스케줄에 맞춰 유동적으로 참여하실 수 있습니다.
+                </div>
+            </details>
+
+            <details>
+                <summary>Q. 어떤 분야의 의료 프로젝트를 주로 진행하나요?</summary>
+                <div class="faq-answer">
+                    A. 특정 진료과에 국한되지 않습니다. 소아청소년과, 산부인과, 정신건강의학과 등 다양한 임상 케이스를 바탕으로 데이터 분석, 환자 모니터링 시스템 개선, 프로세스 효율화 등 다방면의 의료IT 프로젝트를 기획하고 실행합니다.
+                </div>
+            </details>
+
+            <details>
+                <summary>Q. 의료 지식이 없는 개발자/엔지니어도 괜찮나요?</summary>
+                <div class="faq-answer">
+                    A. 네, 헬스케어 도메인에 대한 호기심과 기술로 문제를 해결하려는 의지만 있다면 충분합니다. 부족한 의학적 배경지식은 보건의료인 멤버들과의 협업과 스터디를 통해 채워나갈 수 있습니다.
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 HealCode. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
